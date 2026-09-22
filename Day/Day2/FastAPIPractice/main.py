@@ -4,4 +4,10 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return {"message": "FastAPI is working!","number": 44,"is_fun": True}
+    return {"page": "Home!"}
+@app.get("/about")
+def about():
+    return {"page": "About!","author": "Dexter"}
+@app.get("/health")   
+def health():
+    return {"status": "Healthy!"}     
